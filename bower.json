@@ -1,0 +1,16 @@
+{
+  "name": "form-poster",
+  "version": "1.0.0",
+  "description": "A JavaScript library for posting HTML form data",
+  "main": "lib/index.js",
+  "private": true,
+  "ignore": [
+    "*.log",
+    "**/.*",
+    "package.json",
+    "coverage",
+    "docs",
+    "node_modules",
+    "test"
+  ]
+}
