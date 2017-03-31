@@ -10,9 +10,9 @@
   },
   "scripts": {
     "prebuild": "rm -rf lib && npm test",
-    "build": "NODE_ENV=production babel src --out-dir lib --source-maps",
+    "build": "babel src --out-dir lib --source-maps",
     "changelog": "conventional-changelog --preset angular --infile CHANGELOG.md --same-file",
-    "coverage": "nyc --reporter text --reporter lcov npm test",
+    "coverage": "nyc npm test",
     "lint": "eslint src test",
     "prepublish": "npm run build",
     "pretest": "npm run lint",

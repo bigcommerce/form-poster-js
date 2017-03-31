@@ -3,6 +3,9 @@
     "spec_files": [
         "**/*.spec.js"
     ],
+    "helpers": [
+        "helpers/setup-dom.js"
+    ],
     "stopSpecOnExpectationFailure": false,
     "random": false
 }

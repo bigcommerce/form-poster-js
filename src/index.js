@@ -1,1 +1,3 @@
-export { default as postForm } from './post-form';
+import createFormPoster from './create-form-poster';
+
+export { createFormPoster };
