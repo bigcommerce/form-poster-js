@@ -1,6 +1,6 @@
 {
   "name": "form-poster",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A JavaScript library for posting HTML form data",
   "main": "lib/index.js",
   "private": true,
