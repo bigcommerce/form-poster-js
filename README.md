@@ -6,7 +6,7 @@ This is a JavaScript library for making a POST request as if you are submitting 
 
 ## Usage
 
-You can install this package using npm, yarn or bower. Below is an example of how to use it.
+You can install this package using npm or yarn. Below is an example of how to use it.
 
 ```js
 import { createFormPoster } from 'form-poster';
