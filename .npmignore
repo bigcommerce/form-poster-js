@@ -1,0 +1,7 @@
+*.log
+**/.*
+bower.json
+coverage
+docs
+node_modules
+test
