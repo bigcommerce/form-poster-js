@@ -34,10 +34,10 @@ The source code should be transpiled before it gets released. To do so, run the 
 yarn build
 ```
 
-Also, before you release a new version, remember to update the changelog. To do so, run the following command:
+To bump and tag a release, run
 
 ```sh
-yarn changelog
+yarn release
 ```
 
 After that, you can commit, tag and push to Github.
