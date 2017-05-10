@@ -12,5 +12,6 @@
     "node_modules",
     "package.json",
     "test"
-  ]
+  ],
+  "version": "1.1.0"
 }
