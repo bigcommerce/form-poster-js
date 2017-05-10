@@ -16,8 +16,12 @@
     "changelog": "conventional-changelog --preset angular --infile CHANGELOG.md --same-file",
     "coverage": "nyc npm test",
     "lint": "eslint src test",
-    "prepublish": "npm run build",
     "pretest": "npm run lint",
+    "prerelease": "npm run build && git add lib dist",
+    "release": "standard-version --tag-prefix '' --commit-all",
+    "release:patch": "npm run release -- --release-as patch",
+    "release:minor": "npm run release -- --release-as minor",
+    "release:major": "npm run release -- --release-as major",
     "test": "JASMINE_CONFIG_PATH=.jasmine.json babel-node node_modules/.bin/jasmine"
   },
   "devDependencies": {
@@ -31,6 +35,7 @@
     "jasmine": "^2.5.3",
     "jsdom": "^9.12.0",
     "nyc": "^10.2.0",
+    "standard-version": "^4.0.0",
     "webpack": "^2.5.1"
   }
 }
