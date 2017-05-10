@@ -1,0 +1,16 @@
+{
+  "name": "form-poster",
+  "description": "A JavaScript library for posting HTML form data",
+  "main": "lib/index.js",
+  "private": true,
+  "homepage": "https://github.com/bigcommerce-labs/form-poster-js",
+  "ignore": [
+    "*.log",
+    "**/.*",
+    "bower_components",
+    "docs",
+    "node_modules",
+    "package.json",
+    "test"
+  ]
+}
