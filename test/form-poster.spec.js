@@ -40,7 +40,7 @@ describe('FormPoster', () => {
 
             const event = document.createEvent('Event');
 
-            event.initEvent('beforeunload', true, false);
+            event.initEvent('unload', true, false);
             document.body.dispatchEvent(event);
 
             expect(callback).toHaveBeenCalled();

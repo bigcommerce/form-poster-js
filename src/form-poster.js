@@ -16,8 +16,8 @@ export default class FormPoster {
     postForm(url, data, callback = () => {}) {
         const form = this._formBuilder.build(url, data);
 
-        window.addEventListener('beforeunload', function handleBeforeUnload() {
-            window.removeEventListener('beforeunload', handleBeforeUnload);
+        window.addEventListener('unload', function handleUnload() {
+            window.removeEventListener('unload', handleUnload);
             callback();
         });
 
