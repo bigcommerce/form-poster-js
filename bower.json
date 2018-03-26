@@ -1,5 +1,5 @@
 {
-  "name": "@bigcommerce/form-poster",
+  "name": "form-poster",
   "description": "A JavaScript library for posting HTML form data",
   "main": "lib/index.js",
   "private": true,
