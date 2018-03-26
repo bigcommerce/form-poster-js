@@ -1,9 +1,9 @@
 {
-  "name": "form-poster",
+  "name": "@bigcommerce/form-poster",
   "description": "A JavaScript library for posting HTML form data",
   "main": "lib/index.js",
   "private": true,
-  "homepage": "https://github.com/bigcommerce-labs/form-poster-js",
+  "homepage": "https://github.com/bigcommerce/form-poster-js",
   "ignore": [
     "*.log",
     "**/.*",
