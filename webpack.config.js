@@ -1,21 +1,29 @@
 var path = require('path');
-var pkg = require('./package.json');
 
 module.exports = {
-    devtool: 'sourcemap',
-    entry: './src/index.js',
+    devtool: 'source-map',
+
+    entry: {
+        'form-poster': './src/index.ts',
+    },
+
     output: {
-        filename: 'form-poster.min.js',
+        filename: '[name].min.js',
         library: 'FormPoster',
         libraryTarget: 'umd',
         path: path.resolve(__dirname, 'dist'),
     },
+
+    resolve: {
+        extensions: ['.ts', '.js'],
+    },
+
     module: {
         rules: [
             {
-                include: path.resolve(__dirname, 'src'),
-                loader: 'ts-loader',
                 test: /\.(js|ts)$/,
+                exclude: /node_modules/,
+                loader: 'ts-loader',
             },
         ],
     },

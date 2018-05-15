@@ -3,13 +3,19 @@ module.exports = {
     transform: {
         '\\.(ts|js)$': '<rootDir>/node_modules/ts-jest/preprocessor.js',
     },
-    testRegex: 'test/.*\\.spec.(js|ts)$',
+    moduleFileExtensions: [
+        'ts',
+        'tsx',
+        'js',
+        'jsx',
+        'json',
+    ],
+    testRegex: 'test/.*\\.spec.ts$',
     collectCoverageFrom: [
-        'src/**/*.{js,ts}',
+        'src/**/*.ts',
     ],
     coveragePathIgnorePatterns: [
-        '\\.mock\\.(js|ts)$',
-        '\\.typedef\\.(js|ts)$',
+        '\\.mock\\.ts$',
         '\\.d\\.ts$',
     ],
     coverageThreshold: {

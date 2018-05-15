@@ -5,6 +5,7 @@
   "license": "MIT",
   "main": "lib/index.js",
   "files": [
+    "dist/",
     "lib/"
   ],
   "repository": {
@@ -12,32 +13,26 @@
     "url": "git@github.com:bigcommerce/form-poster-js.git"
   },
   "scripts": {
-    "build": "npm run build:lib && npm run build:bundle",
-    "prebuild:bundle": "rm -rf dist",
-    "build:bundle": "webpack -p",
+    "build": "npm run build:lib && npm run build:umd",
     "prebuild:lib": "rm -rf lib",
     "build:lib": "tsc --outDir lib --project tsconfig-build.json",
-    "lint": "npm run lint:js && npm run lint:ts",
-    "lint:js": "eslint src test",
-    "lint:ts": "tslint 'src/**/*.ts' --config tslint.json --project tsconfig.json && tsc --noEmit",
-    "prepare": "npm run build",
-    "prerelease": "npm run lint && npm test",
-    "release": "standard-version --tag-prefix ''",
+    "prebuild:umd": "rm -rf dist",
+    "build:umd": "webpack -p",
+    "lint": "tslint '{src,test}/**/*.ts' --config tslint.json --project tsconfig.json && tsc --noEmit",
+    "prerelease": "npm run lint && npm test && npm run build && git add lib dist",
+    "release": "standard-version --tag-prefix '' --commit-all",
     "postrelease": "npm publish --access public && git push --follow-tags",
     "test": "jest --config jest-config.js"
   },
   "devDependencies": {
     "@bigcommerce/tslint-config": "^2.0.1",
-    "eslint": "^3.18.0",
-    "eslint-config-airbnb-base": "^11.1.2",
-    "eslint-plugin-import": "^2.2.0",
+    "@types/jest": "^22.2.3",
     "jest": "^22.4.3",
     "standard-version": "^4.0.0",
     "ts-jest": "^21.2.3",
     "ts-loader": "^3.2.0",
     "tslint": "^5.9.1",
     "typescript": "^2.7.1",
-    "typescript-eslint-parser": "^9.0.1",
     "webpack": "^3.12.0"
   }
 }

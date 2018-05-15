@@ -1,24 +1,22 @@
+import FormBuilder from './form-builder';
+
 export default class FormPoster {
     /**
-     * @param {FormBuilder} formBuilder
-     * @returns {void}
+     * @internal
      */
-    constructor(formBuilder) {
-        this._formBuilder = formBuilder;
-    }
+    constructor(
+        private _formBuilder: FormBuilder
+    ) {}
 
-    /**
-     * @param {string} url
-     * @param {Object} data
-     * @param {function(): void} [callback]
-     * @returns {void}
-     */
-    postForm(url, data, callback = () => {}) {
+    postForm(url: string, data: { [key: string]: any }, callback?: () => void): void {
         const form = this._formBuilder.build(url, data);
 
         window.addEventListener('unload', function handleUnload() {
             window.removeEventListener('unload', handleUnload);
-            callback();
+
+            if (callback) {
+                callback();
+            }
         });
 
         // In order to submit the form, the form must be attached to DOM.

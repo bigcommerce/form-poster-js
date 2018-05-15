@@ -1,6 +1,4 @@
 .nyc_output
 *.log
 /coverage
-/dist
-/lib
 /node_modules

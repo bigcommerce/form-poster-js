@@ -1,36 +1,38 @@
+import FormBuilder from '../src/form-builder';
 import FormPoster from '../src/form-poster';
 
 describe('FormPoster', () => {
-    let form;
-    let formBuilder;
-    let formPoster;
+    let form: HTMLFormElement;
+    let formBuilder: FormBuilder;
+    let formPoster: FormPoster;
 
     beforeEach(() => {
         form = document.createElement('form');
+        formBuilder = new FormBuilder();
 
-        formBuilder = {
-            build: jasmine.createSpy().and.returnValue(form),
-        };
+        jest.spyOn(formBuilder, 'build')
+            .mockReturnValue(form);
 
         formPoster = new FormPoster(formBuilder);
     });
 
     describe('#postForm()', () => {
-        let data;
-        let url;
+        const url = '/url/123';
+        const data = { field_1: 'foo', field_2: 'bar' };
 
         beforeEach(() => {
-            url = '/url/123';
-            data = { field_1: 'foo', field_2: 'bar' };
-
-            spyOn(form, 'submit');
+            jest.spyOn(form, 'submit')
+                .mockImplementation(jest.fn());
         });
 
         it('posts the data using a hidden HTML form', () => {
             formPoster.postForm(url, data);
 
-            expect(formBuilder.build).toHaveBeenCalled();
-            expect(form.submit).toHaveBeenCalled();
+            expect(formBuilder.build)
+                .toHaveBeenCalled();
+
+            expect(form.submit)
+                .toHaveBeenCalled();
         });
 
         it('triggers the callback after posting the data', () => {
@@ -43,7 +45,8 @@ describe('FormPoster', () => {
             event.initEvent('unload', true, false);
             document.body.dispatchEvent(event);
 
-            expect(callback).toHaveBeenCalled();
+            expect(callback)
+                .toHaveBeenCalled();
         });
     });
 });

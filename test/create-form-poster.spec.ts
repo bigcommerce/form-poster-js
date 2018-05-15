@@ -5,6 +5,7 @@ describe('createFormPoster', () => {
     it('creates an instance of FormPoster', () => {
         const output = createFormPoster();
 
-        expect(output instanceof FormPoster).toBeTruthy();
+        expect(output)
+            .toBeInstanceOf(FormPoster);
     });
 });

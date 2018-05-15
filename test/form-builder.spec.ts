@@ -1,20 +1,15 @@
 import FormBuilder from '../src/form-builder';
 
 describe('FormBuilder', () => {
-    let formBuilder;
+    let formBuilder: FormBuilder;
 
     beforeEach(() => {
         formBuilder = new FormBuilder();
     });
 
     describe('#build()', () => {
-        let data;
-        let url;
-
-        beforeEach(() => {
-            url = '/url/123';
-            data = { field_1: 'foo', field_2: 'bar' };
-        });
+        const url = '/url/123';
+        const data = { field_1: 'foo', field_2: 'bar' };
 
         it('returns a HTML form with hidden input fields', () => {
             const output = formBuilder.build(url, data);
@@ -25,7 +20,8 @@ describe('FormBuilder', () => {
                 '</form>'
             );
 
-            expect(output.outerHTML).toEqual(expectedOutput);
+            expect(output.outerHTML)
+                .toEqual(expectedOutput);
         });
     });
 });
