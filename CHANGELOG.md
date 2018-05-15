@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.2.0"></a>
+# [1.2.0](https://github.com/bigcommerce/form-poster-js/compare/1.1.2...1.2.0) (2018-05-15)
+
+
+### Features
+
+* **core:** CHECKOUT-3053 Add TypeScript definitions ([8a1bf13](https://github.com/bigcommerce/form-poster-js/commit/8a1bf13))
+
+
+
 <a name="1.1.2"></a>
 ## [1.1.2](https://github.com/bigcommerce/form-poster-js/compare/1.1.1...1.1.2) (2018-03-27)
 
