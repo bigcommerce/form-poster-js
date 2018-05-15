@@ -1,8 +1,0 @@
-*.log
-**/.*
-bower.json
-coverage
-dist
-docs
-node_modules
-test
