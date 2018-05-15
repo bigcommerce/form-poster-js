@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.2.1"></a>
+## [1.2.1](https://github.com/bigcommerce/form-poster-js/compare/1.2.0...1.2.1) (2018-05-15)
+
+
+### Bug Fixes
+
+* **core:** CHECKOUT-3053 Fix TS import by adding `types` field in package.json ([2423e26](https://github.com/bigcommerce/form-poster-js/commit/2423e26))
+
+
+
 <a name="1.2.0"></a>
 # [1.2.0](https://github.com/bigcommerce/form-poster-js/compare/1.1.2...1.2.0) (2018-05-15)
 
