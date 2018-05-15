@@ -21,6 +21,7 @@
     "prepare": "npm run build",
     "prerelease": "npm run lint && npm test",
     "release": "standard-version --tag-prefix ''",
+    "postrelease": "npm publish --access public && git push --follow-tags",
     "test": "jest --config jest-config.js"
   },
   "devDependencies": {

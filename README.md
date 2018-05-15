@@ -22,22 +22,20 @@ formPoster.postForm(url, data, () => {
 
 ## Development
 
-Use yarn to install dependencies. i.e.:
+To install dependencies:
 
 ```sh
-yarn install
+npm install
 ```
 
-The source code should be transpiled before it gets released. To do so, run the following command:
+To transpile source code:
 
 ```sh
-yarn build
+npm run build
 ```
 
-To bump and tag a release, run
+To bump and tag a release:
 
 ```sh
-yarn release
+npm run release
 ```
-
-After that, you can commit, tag and push to Github.
