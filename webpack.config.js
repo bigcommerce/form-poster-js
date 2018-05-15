@@ -5,7 +5,7 @@ module.exports = {
     devtool: 'sourcemap',
     entry: './src/index.js',
     output: {
-        filename: `${pkg.name}.min.js`,
+        filename: 'form-poster.min.js',
         library: 'FormPoster',
         libraryTarget: 'umd',
         path: path.resolve(__dirname, 'dist'),
