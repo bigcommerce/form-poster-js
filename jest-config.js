@@ -1,8 +1,16 @@
 module.exports = {
     browser: true,
-    testRegex: 'test/.*\\.spec.js$',
+    transform: {
+        '\\.(ts|js)$': '<rootDir>/node_modules/ts-jest/preprocessor.js',
+    },
+    testRegex: 'test/.*\\.spec.(js|ts)$',
     collectCoverageFrom: [
-        'test/**/*.js',
+        'src/**/*.{js,ts}',
+    ],
+    coveragePathIgnorePatterns: [
+        '\\.mock\\.(js|ts)$',
+        '\\.typedef\\.(js|ts)$',
+        '\\.d\\.ts$',
     ],
     coverageThreshold: {
         global: {
