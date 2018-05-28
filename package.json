@@ -23,10 +23,12 @@
     "prerelease": "npm run lint && npm test && npm run build && git add lib dist",
     "release": "standard-version --tag-prefix '' --commit-all",
     "postrelease": "npm publish --access public && git push --follow-tags",
-    "test": "jest --config jest-config.js"
+    "test": "jest --config jest-config.js",
+    "validate-commits": "validate-commits"
   },
   "devDependencies": {
     "@bigcommerce/tslint-config": "^2.0.1",
+    "@bigcommerce/validate-commits": "^2.0.3",
     "@types/jest": "^22.2.3",
     "jest": "^22.4.3",
     "standard-version": "^4.0.0",
