@@ -29,10 +29,19 @@ describe('FormPoster', () => {
             formPoster.postForm(url, data);
 
             expect(formBuilder.build)
-                .toHaveBeenCalled();
+                .toHaveBeenCalledWith(url, data);
 
             expect(form.submit)
                 .toHaveBeenCalled();
+        });
+
+        it('builds form with host appended to URL if provided', () => {
+            formPoster = new FormPoster(formBuilder, { host: 'https://foobar.com/' });
+
+            formPoster.postForm(url, data);
+
+            expect(formBuilder.build)
+                .toHaveBeenCalledWith('https://foobar.com/url/123', data);
         });
 
         it('triggers the callback after posting the data', () => {
