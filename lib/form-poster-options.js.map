@@ -1,0 +1,1 @@
+{"version":3,"file":"form-poster-options.js","sourceRoot":"","sources":["../src/form-poster-options.ts"],"names":[],"mappings":"","sourcesContent":["export default interface FormPosterOptions {\n    host?: string;\n}\n"]}

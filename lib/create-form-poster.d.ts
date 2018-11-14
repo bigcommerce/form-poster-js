@@ -1,2 +1,3 @@
 import FormPoster from './form-poster';
-export default function createFormPoster(): FormPoster;
+import FormPosterOptions from './form-poster-options';
+export default function createFormPoster(options?: FormPosterOptions): FormPoster;
