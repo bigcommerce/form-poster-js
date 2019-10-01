@@ -11,8 +11,8 @@ export default class FormPoster {
         private _options?: FormPosterOptions
     ) {}
 
-    postForm(url: string, data: { [key: string]: any }, callback?: () => void): void {
-        const form = this._formBuilder.build(this._prependHost(url), data);
+    postForm(url: string, data: { [key: string]: any }, callback?: () => void, target?: string): void {
+        const form = this._formBuilder.build(this._prependHost(url), data, target);
 
         window.addEventListener('unload', function handleUnload() {
             window.removeEventListener('unload', handleUnload);
