@@ -19,17 +19,28 @@ describe('FormPoster', () => {
     describe('#postForm()', () => {
         const url = '/url/123';
         const data = { field_1: 'foo', field_2: 'bar' };
+        const target = 'target_iframe';
 
         beforeEach(() => {
             jest.spyOn(form, 'submit')
                 .mockImplementation(jest.fn());
         });
 
-        it('posts the data using a hidden HTML form', () => {
+        it('posts the data using a hidden HTML form with the default target', () => {
             formPoster.postForm(url, data);
 
             expect(formBuilder.build)
-                .toHaveBeenCalledWith(url, data);
+                .toHaveBeenCalledWith(url, data, undefined);
+
+            expect(form.submit)
+                .toHaveBeenCalled();
+        });
+
+        it('posts the data using a hidden HTML form with the provided target', () => {
+            formPoster.postForm(url, data, undefined, target);
+
+            expect(formBuilder.build)
+                .toHaveBeenCalledWith(url, data, target);
 
             expect(form.submit)
                 .toHaveBeenCalled();
@@ -41,7 +52,7 @@ describe('FormPoster', () => {
             formPoster.postForm(url, data);
 
             expect(formBuilder.build)
-                .toHaveBeenCalledWith('https://foobar.com/url/123', data);
+                .toHaveBeenCalledWith('https://foobar.com/url/123', data, undefined);
         });
 
         it('triggers the callback after posting the data', () => {
