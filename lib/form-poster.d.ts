@@ -3,6 +3,6 @@ export default class FormPoster {
     private _options;
     postForm(url: string, data: {
         [key: string]: any;
-    }, callback?: () => void): void;
+    }, callback?: () => void, target?: string): void;
     private _prependHost(url);
 }
