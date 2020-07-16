@@ -4,6 +4,6 @@ node_js:
     - 6
 
 script:
-    - npm run validate-commits
+    - npm run validate-commits:ci
     - npm run lint
     - npm run test
