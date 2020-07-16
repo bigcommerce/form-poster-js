@@ -7,4 +7,4 @@
 ## Testing / Proof
 ...
 
-ping @bigcommerce-labs/frontend
+ping @bigcommerce/frontend
