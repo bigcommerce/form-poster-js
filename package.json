@@ -24,7 +24,8 @@
     "release": "standard-version --tag-prefix '' --commit-all",
     "postrelease": "npm publish --access public && git push --follow-tags",
     "test": "jest --config jest-config.js",
-    "validate-commits": "validate-commits"
+    "validate-commits": "validate-commits",
+    "validate-commits:ci": "if [ \"$TRAVIS_PULL_REQUEST\" != \"false\" ]; then validate-commits; fi"
   },
   "devDependencies": {
     "@bigcommerce/tslint-config": "^2.0.1",
