@@ -25,5 +25,7 @@ module.exports = {
             lines: 90,
             statements: 90,
         },
-    }
+    },
+    testEnvironment: 'jsdom',
+    testRunner: 'jest-jasmine2'
 };

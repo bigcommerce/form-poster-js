@@ -1,3 +1,6 @@
 {
-    "extends": "@bigcommerce/tslint-config"
+    "extends": "@bigcommerce/tslint-config",
+    "rules": {
+        "no-shadowed-variable": false
+    }
 }
