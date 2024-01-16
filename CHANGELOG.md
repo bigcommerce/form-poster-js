@@ -1,6 +1,14 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [1.4.2](https://github.com/bigcommerce/form-poster-js/compare/1.4.0...1.4.2) (2024-01-16)
+
+
+### Bug Fixes
+
+* **common:** FE-00 Only run commit-validation in PRs ([f2208c4](https://github.com/bigcommerce/form-poster-js/commit/f2208c402329a1cb64f9f38349de5bc758c7365f))
+* **common:** FE-00 Use correct scope for PULL_REQUEST_TEMPLATE ([2c544b4](https://github.com/bigcommerce/form-poster-js/commit/2c544b4f2a0828529848c6c38b3429d629a29758))
 
 <a name="1.4.0"></a>
 # [1.4.0](https://github.com/bigcommerce/form-poster-js/compare/1.3.0...1.4.0) (2019-11-12)
