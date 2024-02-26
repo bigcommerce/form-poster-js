@@ -1,6 +1,6 @@
 {
   "name": "@bigcommerce/form-poster",
-  "version": "1.4.2",
+  "version": "1.5.0",
   "description": "A JavaScript library for posting HTML form data",
   "license": "MIT",
   "main": "lib/index.js",

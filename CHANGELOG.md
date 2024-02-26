@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/bigcommerce/form-poster-js/compare/1.4.2...1.5.0) (2024-02-26)
+
+
+### Features
+
+* **payment:** PAYPAL-3453 deleted the line with deleting an element from the DOM ([c9d55d2](https://github.com/bigcommerce/form-poster-js/commit/c9d55d2a1da77bd03bd4d30bab83e83f7707575e))
+
 ### [1.4.2](https://github.com/bigcommerce/form-poster-js/compare/1.4.0...1.4.2) (2024-01-16)
 
 
