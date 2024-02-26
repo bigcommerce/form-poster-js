@@ -25,7 +25,6 @@ export default class FormPoster {
         // In order to submit the form, the form must be attached to DOM.
         document.body.appendChild(form);
         form.submit();
-        document.body.removeChild(form);
     }
 
     private _prependHost(url: string): string {
