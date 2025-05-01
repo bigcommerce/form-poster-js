@@ -1,7 +1,6 @@
 module.exports = {
-    browser: true,
     transform: {
-        '\\.(ts|js)$': '<rootDir>/node_modules/ts-jest/preprocessor.js',
+        '\\.(ts|js)$': 'ts-jest',
     },
     moduleFileExtensions: [
         'ts',
