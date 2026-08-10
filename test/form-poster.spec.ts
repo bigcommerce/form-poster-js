@@ -56,7 +56,7 @@ describe('FormPoster', () => {
         });
 
         it('triggers the callback after posting the data', () => {
-            const callback = jasmine.createSpy();
+            const callback = jest.fn();
 
             formPoster.postForm(url, data, callback);
 
@@ -67,6 +67,21 @@ describe('FormPoster', () => {
 
             expect(callback)
                 .toHaveBeenCalled();
+        });
+
+        it('only triggers the callback once even if unload fires multiple times', () => {
+            const callback = jest.fn();
+
+            formPoster.postForm(url, data, callback);
+
+            const event = document.createEvent('Event');
+
+            event.initEvent('unload', true, false);
+            document.body.dispatchEvent(event);
+            document.body.dispatchEvent(event);
+
+            expect(callback)
+                .toHaveBeenCalledTimes(1);
         });
     });
 });
