@@ -24,8 +24,7 @@
     "release": "standard-version --tag-prefix '' --commit-all",
     "postrelease": "npm publish --access public && git push --follow-tags",
     "test": "jest --config jest-config.js",
-    "validate-commits": "validate-commits",
-    "validate-commits:ci": "if [ \"$TRAVIS_PULL_REQUEST\" != \"false\" ]; then validate-commits; fi"
+    "validate-commits": "validate-commits"
   },
   "jest": {
     "testEnvironment": "jsdom"
@@ -37,6 +36,7 @@
     "jest": "^30.0.5",
     "jest-environment-jsdom": "^30.0.2",
     "jest-jasmine2": "^30.0.1",
+    "jest-util": "^30.0.5",
     "standard-version": "^9.5.0",
     "ts-jest": "^29.3.2",
     "ts-loader": "^9.5.2",
