@@ -10,6 +10,7 @@ module.exports = {
         'json',
     ],
     testRegex: 'test/.*\\.spec.ts$',
+    collectCoverage: true,
     collectCoverageFrom: [
         'src/**/*.ts',
     ],
@@ -26,5 +27,4 @@ module.exports = {
         },
     },
     testEnvironment: 'jsdom',
-    testRunner: 'jest-jasmine2'
 };

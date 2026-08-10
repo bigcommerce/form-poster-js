@@ -16,6 +16,11 @@ describe('isAbsoluteUrl()', () => {
         expect(isAbsoluteUrl('/'))
             .toBeFalsy();
     });
+
+    it('returns false for a protocol-relative URL', () => {
+        expect(isAbsoluteUrl('//foobar.com/hello/world'))
+            .toBeFalsy();
+    });
 });
 
 describe('joinPaths()', () => {
@@ -27,5 +32,10 @@ describe('joinPaths()', () => {
     it('strips out trailing and leading slashes automatically', () => {
         expect(joinPaths('https://foobar.com/', '/hello/world'))
             .toEqual('https://foobar.com/hello/world');
+    });
+
+    it('joins paths that have no leading or trailing slashes', () => {
+        expect(joinPaths('foo', 'bar'))
+            .toEqual('foo/bar');
     });
 });

@@ -37,5 +37,15 @@ describe('FormBuilder', () => {
             expect(output.outerHTML)
                 .toEqual(expectedOutput);
         });
+
+        it('returns a HTML form with no input fields if no data is provided', () => {
+            const output = formBuilder.build(url, {});
+            const expectedOutput = (
+                '<form style="display: none;" action="/url/123" method="POST" target="_top"></form>'
+            );
+
+            expect(output.outerHTML)
+                .toEqual(expectedOutput);
+        });
     });
 });
